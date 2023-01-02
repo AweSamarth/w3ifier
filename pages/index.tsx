@@ -9,12 +9,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee, faAngleDoubleDown, fas } from '@fortawesome/free-solid-svg-icons'
 
 
+import { disconnect } from '@wagmi/core'
+
+
 const Home: NextPage = () => {
+
   const [text, setText] = useState("Kind of hard to believe, isn't it?");
   const [opacity, setOpacity] = useState(1);
   const [scrolled, setScrolled] = useState(0); // Define the scrolled state variable
   const { address, isConnecting, isDisconnected } = useAccount();
   useEffect(() => {
+     window.scrollTo(0,0)
     // Define the event handler function
     const handleScroll = () => {
       // Check the scroll position
@@ -46,14 +51,21 @@ const Home: NextPage = () => {
 
     window.addEventListener("scroll", handleScroll);
   }, []);
+  useEffect(()=>{
+
+  },[])
 
   return (
+
+
     <div className="flex flex-col bg-gradient-to-r from-gray-700 via-gray-900 to-black min-h-screen ">
       <div className=" fixed flex justify-center w-[100%]  border-red-500 h-16 text-center bg-gradient-to-r from-gray-900  to-black">
         <div className=" flex h-min align-middle self-center font-pressKaro  text-sm text-white ">
           w3ifier
         </div>
       </div>
+
+      
       <div className="mt-20  flex w-[100%] justify-center flex-col fixed">
         <div className=" flex self-center text-white font-[Inter] text-3xl font-bold">
           This is a
@@ -72,9 +84,13 @@ const Home: NextPage = () => {
       </div>
       <div className=" mt-[22rem] text-center text-white font-[Inter] text-xl fixed w-[100%]">
       {scrolled!=2?
-      (<FontAwesomeIcon icon={faAngleDoubleDown} color="grey" />):""
+      (<FontAwesomeIcon icon={faAngleDoubleDown} color="grey" />):<div className="flex justify-center"><ConnectButton /></div>
       }
       </div>
+      <div className=" mt-[24rem] text-center text-white font-[Inter] text-xl fixed w-[100%]">
+        {address?address:"blank"}
+      </div>
+      <div id="brs">
       <br />
       <br />
       <br />
@@ -150,8 +166,8 @@ const Home: NextPage = () => {
       <br />
       <br />
       <br />
-      
-      <div className=" fixed bottom-0 flex justify-center w-[100%]  border-red-500 h-16 text-center bg-gradient-to-r from-gray-900  to-black">
+      </div>
+      <div className=" fixed bottom-0 flex justify-center w-[100%] border-2  border-red-500 h-16 text-center bg-gradient-to-r from-gray-900  to-black">
         <div className=" flex h-min align-middle self-center font-pressKaro text-[10px] text-white ">
           Made with a smug smile on his face by:&nbsp;
           <a href="https://twitter.com/awesamarth_" target="_blank">
