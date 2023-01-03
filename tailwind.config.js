@@ -6,7 +6,8 @@ module.exports = {
   ],  theme: {
     fontFamily: {
       'pressKaro':['"Press Start 2P"', 'sans-serif'],
-      'Inter' : ['Inter', 'sans-serif']
+      'Inter' : ['Inter', 'sans-serif'],
+      'Poppins':['Poppins', 'sans-serif'],
     },
     extend: {},
   },

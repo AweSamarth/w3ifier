@@ -1,6 +1,8 @@
 import '../styles/globals.css';
 import '@rainbow-me/rainbowkit/styles.css';
 import type { AppProps } from 'next/app';
+import dynamic from "next/dynamic";
+
 import {
   darkTheme,
   getDefaultWallets,
@@ -27,7 +29,11 @@ const wagmiClient = createClient({
   autoConnect: true,
   connectors,
   provider
+
+
 })
+
+{/*bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-rose-500 to-indigo-700*/}
 
 
 
@@ -47,4 +53,6 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default MyApp;
+export default dynamic(() => Promise.resolve(MyApp), {
+  ssr: false,
+});
