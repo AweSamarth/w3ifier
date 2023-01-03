@@ -188,7 +188,7 @@ const Home: NextPage = () => {
               <div className="flex text-purple-200 font-Poppins  text-xl font-light">
                 Here is a description that is jam-packed with buzzwords and
                 empty promises. The entire thing condenses down to: trust me bro
-                we’ll make you rich.
+                we’ll make you rich
               </div>
             </div>
             <div className=" h-min self-center text-[6.1em]">💩💩💩</div>
@@ -221,7 +221,7 @@ const Home: NextPage = () => {
                 We hope you were impressed by our over-engineering and vague
                 explanations. Now pls gib your money. We aren’t accepting crypto
                 at the moment because uhhh it’s uhhhh we’re still working on
-                that part.
+                that part
               </div>
             </div>
             <div className=" w-[32%] self-center text-[1em] flex justify-center">
