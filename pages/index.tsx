@@ -13,7 +13,7 @@ import Image from "next/image";
 import { disconnect } from "@wagmi/core";
 
 const Home: NextPage = () => {
-  const [text, setText] = useState("Kind of hard to believe, isn't it?");
+  const [text, setText] = useState("Kind of hard to believe, isnt it?");
   const [opacity, setOpacity] = useState(1);
   const [scrolled, setScrolled] = useState(0); // Define the scrolled state variable
   const { address, isConnecting, isDisconnected } = useAccount();
@@ -211,7 +211,6 @@ const Home: NextPage = () => {
             </div>
           </div>
 
-
           <div className="flex  mt-12 mb-32 justify-between ">
             <div className="flex flex-col  border-red-500 w-[40%] h-min self-center">
               <div className=" flex  text-gray-200 font-[Inter]  text-2xl mb-2 font-bold">
@@ -225,16 +224,17 @@ const Home: NextPage = () => {
               </div>
             </div>
             <div className=" w-[32%] self-center text-[1em] flex justify-center">
-              <div className=" w-52 h-16 flex ">                  <a 
-                    href="https://www.buymeacoffee.com/awesamarth"
-                    target="_blank"
-                    className="h-[100%] w-[100%]"
-                  >
-                <button className="bg-purple-500 transition-colors hover:bg-purple-900 h-[100%] w-[100%] text-white font-bold py-2 px-4 rounded-lg m-auto font-Inter">
-
+              <div className=" w-52 h-16 flex ">
+                {" "}
+                <a
+                  href="https://www.buymeacoffee.com/awesamarth"
+                  target="_blank"
+                  className="h-[100%] w-[100%]"
+                  rel="noreferrer"
+                >
+                  <button className="bg-purple-500 transition-colors hover:bg-purple-900 h-[100%] w-[100%] text-white font-bold py-2 px-4 rounded-lg m-auto font-Inter">
                     gib money
-                  
-                </button>
+                  </button>
                 </a>
               </div>
             </div>
@@ -255,7 +255,7 @@ const Home: NextPage = () => {
       ) : (
         <div className="absolute z-0 top-24  flex w-[100%] justify-center flex-col ">
           <div className="flex-col self-center text-center font-[Monument] text-4xl font-bold text-purple-400">
-            That's more like it!
+            That&apos;s more like it!
           </div>
         </div>
       )}
@@ -269,7 +269,7 @@ const Home: NextPage = () => {
       >
         <div className=" flex h-min align-middle self-center font-pressKaro text-[10px] text-white ">
           Made with a smug smile on his face by:&nbsp;
-          <a href="https://twitter.com/awesamarth_" target="_blank">
+          <a href="https://twitter.com/awesamarth_" target="_blank" rel="noreferrer">
             <span className="text-blue-400 hover:cursor-pointer">
               {" "}
               Samarth Saxena
