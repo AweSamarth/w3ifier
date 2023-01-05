@@ -13,7 +13,7 @@ import Image from "next/image";
 import { disconnect } from "@wagmi/core";
 
 const Home: NextPage = () => {
-  const [text, setText] = useState("Kind of hard to believe, isnt it?");
+  const [text, setText] = useState("Kind of hard to believe, isn't it?");
   const [opacity, setOpacity] = useState(1);
   const [scrolled, setScrolled] = useState(0); // Define the scrolled state variable
   const { address, isConnecting, isDisconnected } = useAccount();
