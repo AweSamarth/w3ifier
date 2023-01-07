@@ -262,7 +262,7 @@ const Home: NextPage = () => {
       )}
 
       <div
-        className={`fixed bottom-0 flex justify-center w-[100%]  border-red-500 h-16 text-center transition-colors duration-200 ${
+        className={`fixed  bottom-0 flex justify-center w-[100%]  border-red-500 h-16 text-center transition-colors duration-200 ${
           address
             ? "bg-gradient-to-tr from-rose-700 to-indigo-900"
             : "bg-gradient-to-r from-gray-900  to-black"
